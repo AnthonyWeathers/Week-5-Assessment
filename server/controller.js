@@ -238,10 +238,6 @@ module.exports = {
     },
     createCity: (req, res) => {
         const {name, rating, countryId} = req.body
-        console.log(rating)
-        console.log(typeof rating)
-        console.log(countryId)
-        console.log(typeof countryId)
         sequelize.query(`
             insert into cities (name, rating, country_id)
             values ('${name}', ${rating}, ${countryId});
